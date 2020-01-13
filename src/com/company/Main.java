@@ -16,12 +16,15 @@ public class Main {
         try {
             RGBDisplayModel model = new RGBDisplayModel();
             BufferedImage img = model.getImage();
+
+            long start = System.currentTimeMillis();
             model.setOriginalImage(img);
+            long elapsed = System.currentTimeMillis() - start;
+            System.out.println("Threads elapsed time: " + elapsed + " ms.");
 
             BufferedImage redResult = model.getRedImage();
             BufferedImage greenResult = model.getGreenImage();
             BufferedImage blueResult = model.getBlueImage();
-
 
             File outputfileRED = new File("redResult.jpg");
             File outputfileGREEN = new File("greenResult.jpg");

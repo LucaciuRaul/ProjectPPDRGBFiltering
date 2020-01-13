@@ -9,7 +9,7 @@ class CreateImageThread extends Thread {
         createColorImageThreadTask(originalImage, mask, resultList, index);
     }
 
-    private synchronized void createColorImageThreadTask(BufferedImage imageChunk, int mask, ArrayList<BufferedImage> resultList, int index) {
+    private synchronized void createColorImageThreadTask(BufferedImage imageChunk   , int mask, ArrayList<BufferedImage> resultList, int index) {
         BufferedImage colorImage = new BufferedImage(imageChunk.getWidth(),
                 imageChunk.getHeight(), imageChunk.getType());
 
